@@ -1,3 +1,4 @@
+const { truncate } = require('lodash')
 const path = require('path')
 
 const postcssPlugins = [
@@ -18,7 +19,7 @@ module.exports = {
         watchFiles: ["app/**/*.html"],
         static: {
             directory: path.join(__dirname, "app"),
-            watch: false
+                watch: true
         },
         host: '0.0.0.0',
         hot: true,
